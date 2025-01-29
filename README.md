@@ -18,29 +18,27 @@ Wikipedia Agent is an AI chatbot that utilizes a large language model (LLM) trai
 ## Examples
 
 1. **Basic Query**
-
-* User: “Who invented the telephone?”
+* User: “WWhat is the capital of France?”
 * Agent:
     * Calls wikipedia_search() with “telephone.”
     * Returns a quick summary about Alexander Graham Bell.
-    * Agent responds:
-
-        “Alexander Graham Bell is credited with the invention of the telephone…”
-
+    * Agent responds: “Alexander Graham Bell is credited with the invention of the telephone…”
+        
 2. **Complex Query**
-
-* User: “Explain how quantum entanglement is demonstrated in the EPR paradox and reference any experiments.”
+* User: “Explain how quantum entanglement is demonstrated in the EPR paradox.”
 * Agent:
-    * Tries wikipedia_search() with “quantum entanglement,” but the summary might be too short.
-    * Fetches full Wikipedia pages on “Quantum Entanglement” and “EPR paradox,” stores in VectorDB.
-    * Performs semantic similarity to find relevant sections on experiments demonstrating EPR.
-    * Provides a detailed explanation with references to John Bell’s experiments, etc.
+    * Tries wikipedia_search() with “quantum entanglement” but the summary might be too short.
+    * Fetches full Wikipedia pages on “Quantum Entanglement” and stores in VectorDB.
+    * Performs semantic similarity to find relevant sections on quantum entanglement.
+    * Agent repeats this for "EPR Paradox". Combines the context of both results.
+    * Provides a detailed explanation.
 
 3. Math-Integrated Query
-
-* User: “Calculate the area of a circle with radius 10 plus 150.”
+* User: “What is 2 times the mass of the Earth?”
 * Agent:
-    * Interprets the request as “π * (10^2) + 150” and calls calculate().
+    * Calls wikipedia_search() with Earth.”
+    * Fetches the Earth’s mass from the wikipedia summary.
+    * Uses a calculator tool to multiply the mass by 2.
         Returns the computed result.
 
 ## Repositiry Strcture:
