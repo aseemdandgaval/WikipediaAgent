@@ -41,7 +41,7 @@ Wikipedia Agent is an AI chatbot that utilizes a large language model (LLM) trai
     * Uses a calculator tool to multiply the mass by 2.
         Returns the computed result.
 
-## Repositiry Strcture:
+## Repository Structure:
 
 ```
 .
